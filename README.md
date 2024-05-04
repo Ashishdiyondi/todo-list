@@ -1,6 +1,14 @@
+To install all the depencendies type `npm i`.
+To run the project type `npm start`.
+I have use openweather api for the showing weather information for outdoor activity.
+These Todo-list project use localstorage for storing data.
+In login credentials type username and password which will store in localstorage.
+Every user can store there todolist uniquely.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
