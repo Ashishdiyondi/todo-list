@@ -11,13 +11,13 @@ const Tasklist = ({ todos, setTodos }) => {
         for (const todo of todos) {
           if (todo.place) {
             const response = await axios.get(
-              `http://api.openweathermap.org/geo/1.0/direct?q=${
+              `https://api.openweathermap.org/geo/1.0/direct?q=${
                 todo.place
               }&limit=1&appid=${"780bcdd791b565e6daa208049430d9fd"}`
             );
             const { lat, lon } = response.data[0];
             const weatherResponse = await axios.get(
-              `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${"780bcdd791b565e6daa208049430d9fd"}&units=metric`
+              `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${"780bcdd791b565e6daa208049430d9fd"}&units=metric`
             );
             const weather = {
               temperature: weatherResponse.data.main.temp,
@@ -87,7 +87,7 @@ const Tasklist = ({ todos, setTodos }) => {
         >
           {todo.place && weatherData[todo.place] && (
             <img
-              src={`http://openweathermap.org/img/wn/${
+              src={`https://openweathermap.org/img/wn/${
                 weatherData[todo.place].icon
               }.png`}
               alt="Weather Icon"
