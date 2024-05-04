@@ -104,14 +104,14 @@ const Tasklist = ({ todos, setTodos }) => {
             className={
               "h4 me-2 " +
               (todo.completed
-                ? "bi bi-check-square text-white"
-                : "bi bi-square text-white")
+                ? "bi bi-check-square text-black"
+                : "bi bi-square text-black")
             }
             style={{ cursor: "pointer" }}
             onClick={() => changeTaskStatus(index)}
           ></i>
           <i
-            className="bi bi-trash text-white h4"
+            className="bi bi-trash text-black h4"
             style={{ cursor: "pointer" }}
             onClick={() => deleteTask(index)}
           ></i>
